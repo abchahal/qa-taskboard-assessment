@@ -67,7 +67,7 @@ describe("task access control", () => {
       },
       body: JSON.stringify({ title: "viewer create attempt" }),
     });
-    expect(res.status).toBe(401);
+    expect(res.status).toBe(403);
   });
 
   // Test C
@@ -81,5 +81,13 @@ describe("task access control", () => {
       body: JSON.stringify({ title: "member create — baseline" }),
     });
     expect(res.status).toBe(201);
+  });
+
+  // Test D
+  it("should return 401 when accessing task without a token", async () => {
+    const response = await fetch(`${BASE_URL}/api/projects/cmqpevw0a0006ttmo6pwrpo0v/tasks`, {
+      method: "GET",
+    });
+    expect(response.status).toBe(401);
   });
 });
