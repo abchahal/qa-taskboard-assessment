@@ -96,3 +96,7 @@ curl -H "Authorization: Bearer <token>" http://localhost:3000/api/projects
 - Tailwind CSS 3
 - bcryptjs + jsonwebtoken
 - Vitest 2 (testing)
+
+## Recording
+**Repository URL**: [Repo URL](https://github.com/abchahal/qa-taskboard-assessment)
+**Link:** [Recording Link](https://www.loom.com/share/3fcf44afc66b4c5294db5787f775ba52)
